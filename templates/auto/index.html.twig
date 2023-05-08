@@ -1,0 +1,33 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+<div class="container">
+<table class="table">
+    <thead>
+    <tr>
+
+        <th scope="col">id</th>
+        <th scope="col">Model</th>
+        <th scope="col">Type</th>
+        <th scope="col">Prijs(euro)</th>
+    </tr>
+    </thead>
+    {% for auto in autos %}
+        <tr>
+            <th scope="row">{{ auto.id }}</th>
+            <td>{{ auto.model }}</td>
+            <td>{{ auto.type }}</td>
+            <td>{{ auto.prijs }}</td>
+            <td><a href="{{ path('detailCar',{'id':auto.id}) }}">details</a></td>
+            <td><a href="{{ path('updateCar',{'id':auto.id}) }}">update</a></td>
+            <td><a href="{{ path('deleteCar',{'id':auto.id}) }}">delete</a></td>
+
+
+        </tr>
+
+</div>
+
+    {% endfor %}
+    </table>
+    <a href="/insert">Insert</a>
+    {% endblock %}
+

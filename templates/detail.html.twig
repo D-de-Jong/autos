@@ -1,0 +1,29 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+<div class="container">
+<table class="table">
+    <thead>
+    <tr>
+
+        <th scope="col">Gewicht(kg)</th>
+        <th scope="col">Voorraad</th>
+        <th scope="col">Prijs</th>
+    </tr>
+    </thead>
+
+        <tr>
+            <td>{{ cars.gewicht }}</td>
+            <td>{{ cars.voorraad }}</td>
+            <td>{{ cars.prijs }}</td>
+
+
+
+
+        </tr>
+
+</div>
+
+    </table>
+    <a href="/">Terug</a>
+    {% endblock %}
+
